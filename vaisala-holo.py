@@ -52,15 +52,20 @@ else:
 
 print(site)
 
-deviceid = {"gri": "511833", "bel": "585918"}
-timestart = {"gri": 1579651200, "bel": 1586962800}
+deviceid = {  # "gri": "511833",
+    "bel": "585918",
+    "wts": "511833",  # reusing same device for WTS21 as was used at GRI
+}
+wtstimestart = {"gri": 1579651200, "bel": 1586962800, "wts": 1619713600}
 latlon = {
     "gri": {"lat": 38.117250, "lon": -122.039833},
     "bel": {"lat": 48.760415, "lon": -122.521977},
+    "wts": {"lat": 37.592452, "lon": -122.147247},
 }
 title = {
     "gri": "Grizzly Bay Meteorological Station",
     "bel": "Bellingham Bay Meteorological Station",
+    "wts": "Whale's Tail South Meteorological Station",
 }
 
 params = {}
