@@ -22,7 +22,7 @@ def fetch_api_data(params):
 
     s = requests.Session()
 
-    r = s.get("https://dashboard.hologram.io/api/1/csr/rdm", params=params)
+    r = s.get("https://dashboard.hologram.io/api/1/csr/rdm", params=params, timeout=65)
 
     lines = []
     for n in range(len(r.json()["data"])):
@@ -33,7 +33,9 @@ def fetch_api_data(params):
         )
 
     while r.json()["continues"]:
-        r = s.get("https://dashboard.hologram.io" + r.json()["links"]["next"])
+        r = s.get(
+            "https://dashboard.hologram.io" + r.json()["links"]["next"], timeout=65
+        )
         print("appending lines", lines[-1])
         for n in range(len(r.json()["data"])):
             lines.append(
