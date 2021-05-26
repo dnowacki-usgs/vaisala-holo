@@ -162,7 +162,7 @@ def add_standard_attrs(ds):
     ds["Sm"].attrs["units"] = "m s-1"
 
     ds["Pa"].attrs["standard_name"] = "air_pressure"
-    ds["Pa"].attrs["units"] = "Pa"
+    ds["Pa"].attrs["units"] = "hPa"
 
     ds["Ta"].attrs["standard_name"] = "air_temperature"
     ds["Ta"].attrs["units"] = "degree_C"
