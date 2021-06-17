@@ -58,11 +58,11 @@ deviceid = {  # "gri": "511833",
     "bel": "585918",
     "wts": "511833",  # reusing same device for WTS21 as was used at GRI
 }
-timestart = {"gri": 1579651200, "bel": 1586962800, "wts": 1619713600}
+timestart = {"gri": 1579651200, "bel": 1586962800, "wts": 1623880800}
 latlon = {
     "gri": {"lat": 38.117250, "lon": -122.039833},
     "bel": {"lat": 48.760415, "lon": -122.521977},
-    "wts": {"lat": 37.592452, "lon": -122.147247},
+    "wts": {"lat": 37.59358, "lon": -122.14714},
 }
 title = {
     "gri": "Grizzly Bay Meteorological Station",
