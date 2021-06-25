@@ -62,7 +62,7 @@ timestart = {"gri": 1579651200, "bel": 1586962800, "wts": 1623880800}
 latlon = {
     "gri": {"lat": 38.117250, "lon": -122.039833},
     "bel": {"lat": 48.760415, "lon": -122.521977},
-    "wts": {"lat": 37.59358, "lon": -122.14714},
+    "wts": {"lat": 37.59357839, "lon": -122.1471107},
 }
 title = {
     "gri": "Grizzly Bay Meteorological Station",
@@ -147,6 +147,11 @@ ds.attrs["cdm_timeseries_variables"] = "feature_type_instance, latitude, longitu
 
 if site == "gri":
     ds.attrs["elevation"] = "Sensor elevation 6.81 m NAVD88"
+
+if site == "wts":
+    ds.attrs[
+        "elevation"
+    ] = "Sensor elevation 6.47 m NAVD88; 4.23 m above local ground surface"
 
 
 def add_standard_attrs(ds):
