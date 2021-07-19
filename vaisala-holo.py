@@ -122,6 +122,10 @@ if site == "bel":
     # so subtract 15
     dsnew["Dm"] = (dsnew["Dm"] - 15) % 360
 
+# deal with bad signalpct values prior to the merge
+dsold["signalpct"][dsold["signalpct"] < 0] = -9999
+dsnew["signalpct"][dsnew["signalpct"] < 0] = -9999
+
 ds = xr.merge([dsold, dsnew])
 
 for k in ds.data_vars:
