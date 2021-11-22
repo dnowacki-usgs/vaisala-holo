@@ -126,7 +126,8 @@ if site == "bel":
     dsnew["Dm"] = (dsnew["Dm"] - 15) % 360
 
 # deal with bad signalpct values prior to the merge
-dsold["signalpct"][dsold["signalpct"] < 0] = -9999
+if "signalpct" in dsold:
+    dsold["signalpct"][dsold["signalpct"] < 0] = -9999
 dsnew["signalpct"][dsnew["signalpct"] < 0] = -9999
 
 ds = xr.merge([dsold, dsnew])
