@@ -57,17 +57,20 @@ print(site)
 deviceid = {  # "gri": "511833",
     "bel": "585918",
     "wts": "511833",  # reusing same device for WTS21 as was used at GRI
+    "wtw": "511833",  # reusing same device for WTS21 as was used at GRI
 }
-timestart = {"gri": 1579651200, "bel": 1586962800, "wts": 1623880800}
+timestart = {"gri": 1579651200, "bel": 1586962800, "wts": 1623880800, "wtw": 1636963200}
 latlon = {
     "gri": {"lat": 38.117250, "lon": -122.039833},
     "bel": {"lat": 48.760415, "lon": -122.521977},
     "wts": {"lat": 37.59357839, "lon": -122.1471107},
+    "wtw": {"lat": 37.59357839, "lon": -122.1471107},
 }
 title = {
     "gri": "Grizzly Bay Meteorological Station",
     "bel": "Bellingham Bay Meteorological Station",
     "wts": "Whale's Tail South Meteorological Station",
+    "wtw": "Whale's Tail Winter Meteorological Station",
 }
 
 params = {}
