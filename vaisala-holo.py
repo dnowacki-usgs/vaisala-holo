@@ -232,7 +232,7 @@ ds.to_netcdf(
     fildir + site + ".nc",
     encoding={
         "time": {"dtype": "int32"},
-        "signalpct": {"dtype": "int32"},
-        "Dm": {"dtype": "int32"},
+        "signalpct": {"dtype": "int32", "_FillValue": -9999},
+        "Dm": {"dtype": "int32", "_FillValue": -9999},
     },
 )
